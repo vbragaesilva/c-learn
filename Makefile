@@ -1,6 +1,5 @@
 .PHONY: compile
-compile:
+compile: $(object)
 	@clear
-	@clang main.c -o main && ./main 
+	@gcc -o main main.c -lm && ./main
 	@echo 
-	@echo Press no key to continue.
